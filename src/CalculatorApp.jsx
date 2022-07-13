@@ -1,5 +1,5 @@
 import React from 'react';
-import { Topbar } from './components';
+import { CalculatorBody, Topbar } from './components';
 
 function CalculatorApp() {
   const [theme, setTheme] = React.useState(0);
@@ -20,8 +20,9 @@ function CalculatorApp() {
             : `rgb(23,6,42)`,
       }}
     >
-      <div className="w-full max-w-md p-6">
+      <div className="w-full max-w-[470px] p-6 space-y-6">
         <Topbar theme={theme} onThemeChange={themeChangeHandler} />
+        <CalculatorBody theme={theme} />
       </div>
     </div>
   );
