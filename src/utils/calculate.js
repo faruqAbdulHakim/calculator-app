@@ -20,8 +20,9 @@ const calculate = (num1String, num2String, operation) => {
       );
       break;
     case '/':
-      returnValue = num2 / num1;
-      returnValue = parseFloat(returnValue.toFixed(16)).toString();
+      returnValue = num2 * num1 ** -1;
+      const fd1 = countFractiondigit((num1 ** -1).toString());
+      returnValue = returnValue.toFixed(fd1 + fractionDigit2);
       break;
     case 'X':
       returnValue = num2 * num1;
