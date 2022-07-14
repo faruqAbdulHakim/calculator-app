@@ -1,10 +1,11 @@
 import React from 'react';
 import { Keys } from '../utils';
 
-function Key({ children, theme, type }) {
+function Key({ children, theme, type, onClick }) {
   return (
     <button
       type="button"
+      onClick={onClick}
       className="font-bold pt-2 pb-1 text-xl sm:text-2xl leading-normal rounded-md 
       tracking-wider active:scale-95 origin-bottom transition-colors
       uppercase bg-[color:var(--bg)] hover:bg-[color:var(--bg-onhover)]"
